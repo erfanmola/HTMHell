@@ -1,0 +1,62 @@
+@font-face {
+  font-family: "Estedad VF";
+  src: url("../assets/fonts/Estedad/Estedad-VF.woff2") format("woff2");
+}
+
+.light {
+  font-variation-settings: "wght" 300;
+}
+
+.normal {
+  font-variation-settings: "wght" 400;
+}
+
+.medium {
+  font-variation-settings: "wght" 500;
+}
+
+.bold {
+  font-variation-settings: "wght" 600;
+}
+
+.semi-black {
+  font-variation-settings: "wght" 700;
+}
+
+.black {
+  font-variation-settings: "wght" 800;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../assets/fonts/icomoon/icomoon.eot?dnowcr');
+  src:  url('../assets/fonts/icomoon/icomoon.eot?dnowcr#iefix') format('embedded-opentype'),
+  url('../assets/fonts/icomoon/icomoon.ttf?dnowcr') format('truetype'),
+  url('../assets/fonts/icomoon/icomoon.woff?dnowcr') format('woff'),
+  url('../assets/fonts/icomoon/icomoon.svg?dnowcr#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-rotate-cw:before {
+  content: "\e900";
+}
+.icon-arrow-right:before {
+  content: "\e901";
+}
+.icon-arrow-left:before {
+  content: "\e902";
+}
