@@ -1,0 +1,87 @@
+/*
+*       ___      ___       ___  __    __   __   __  
+* |  | |__   /\   |  |__| |__  |__)  /  ` /__` /__` 
+* |/\| |___ /~~\  |  |  | |___ |  \ .\__, .__/ .__/ 
+*
+* Minecraft weather effects with pure CSS
+* © Copyright 2014 Moritz Marquardt
+*
+* https://github.com/moqmar/weather.css
+*
+* Licensed under MIT License (http://opensource.org/licenses/MIT)
+*/
+.weather {
+    position: relative; overflow: hidden;
+}
+/* pseudo elements: positioning and setup */
+.weather:before, .weather:after {
+    content: "";
+    position: absolute; left: -50%; top: -50%; right: -50%; bottom: -50%;
+    z-index: 1;
+    pointer-events: none;
+    
+    background: transparent repeat;
+    background-size: 256px 1024px;
+    -ms-interpolation-mode: nearest-neighbor;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: -webkit-crisp-edges;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
+    image-rendering: pixelated;
+    opacity: 0.7;
+    
+    -webkit-transform: rotate(10deg);
+    -moz-transform: rotate(10deg);
+    -ms-transform: rotate(10deg);
+    -o-transform: rotate(10deg);
+    transform: rotate(10deg);
+    
+    -webkit-animation-name: weather;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-name: weather;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.weather:after {
+    opacity: 0.8;
+    -webkit-animation-name: weather2;
+    animation-name: weather2;
+}
+/* snow (slow, snow.png) */
+.weather.snow:before, .weather.snow:after {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAEAAQMAAAA5iOJFAAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAZQTFRFAAAA6R5jA65d3QAAAAJ0Uk5TAP9bkSK1AAAA4ElEQVR4nM2UuxHDIAyGMYcvnKsULlO49AgpGSEjMUpGySgZJYZDhCDM20m+AnQ/AolDiBDFmRhWMKzyRRgZBNjSzG/Fyiq14bENV1fJQiQ99qENe2OwcJSxU1wBxhMpBzCDwSHQvOfqI9si82AKAQYwqPSVYiY9SucRp+qzUmxR+lfHjzEf117iZGZRcy3cu9awYyHHNEcBxh0pPZF123B9jWFHomt/KTlbmhk3+3ZsIjekZEG92VYkXgmG/fD4508aKWGdrWqe+u4XV4nBoqu42VolmwUM87g89bgZjf0FFUsOlWogjC8AAAAASUVORK5CYII=);
+    -webkit-animation-duration: 6s;
+    animation-duration: 6s;
+}
+.weather.snow:after {
+    -webkit-animation-duration: 4.5s;
+    animation-duration: 4.5s;
+}
+/* animation keyframes */
+@-webkit-keyframes weather {
+    from { background-position: 0 0px; }
+    to { background-position: 0 1024px; }
+}
+@keyframes weather {
+    from { background-position: 0 0px; }
+    to { background-position: 0 1024px; }
+}
+@-webkit-keyframes weather2 {
+    from { background-position: 64px 64px; }
+    to { background-position: 64px 1088px; }
+}
+@keyframes weather2 {
+    from { background-position: 64px 64px; }
+    to { background-position: 64px 1088px; }
+}
+
+.weather {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: none;
+}

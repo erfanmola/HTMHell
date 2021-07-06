@@ -249,6 +249,12 @@
                     <p>ابزارک هایی مثل بارش برف در وبسایت، فال حافظ آنلاین، آب و هوای آنلاین، اوقات شرعی و ... توی وبسایت شما نه تنها امتیاز محسوب نمی‌شوند، بلکه به‌شدت حرکت مسخره‌ای هست، مگه کاربر اومده توی وبسایت شما سیزده‌به‌در کنه که این‌همه چرت و پرت نامرتبط براش فراهم می‌کنید، کاربر برای محتوای اختصاصی شما میاد توی وبسایت شما و وقتی محتوا رو دید از وبسایت شما خارج میشه، به‌همین سادگی !</p>
                 </section>
 
+                <section id="structure-search">
+                    <a href="#structure-search"><h4 class="bold">کمبود بخش جستجو</h4></a>
+
+                    <p>وبسایت هایی که دائما ازشون محتوا زاییده میشه ولی یه باکس سرچ درست و حسابی ندارند و برای اینکه یه محتوایی که چند وقت پیش دیدیم رو پیدا کنیم، باید سیصد صفحه جلو عقب کنیم تا بهش برسیم، یا وبسایت هایی که از سرچ گوگل با پارامتر site: استفاده می‌کنند و خودشون رو راحت می‌کنند</p>
+                </section>
+
             </div>
 
             <div class="section-container">
@@ -260,6 +266,12 @@
                     <a href="#content-autoplay"><h4 class="bold">پخش خودکار رسانه</h4></a>
 
                     <p>صفحاتی که بدون اجازه شما و به‌صورت خودکار شروع به پخش ویدیو یا موزیک می‌کنند، مثلا وقتی من ۱۰ تا ویدیو رو همزمان توی یوتیوب باز می‌کنم به این معنی هست که میخوام همه‌شون رو به‌ترتیب ببینم، لزومی نداره شروع کنی هر ۱۰ تا ویدیو رو همزمان پخش کنید و صدای همشون ترکیب بشه و من برم دونه‌دونه Pause شون کنم</p>
+                </section>
+
+                <section id="content-pdf">
+                    <a href="#content-pdf"><h4 class="bold">محتوا به‌صورت PDF</h4></a>
+
+                    <p>صفحاتی که بعد از دو ساعت سرچ بهشون می‌رسیم و به‌جای محتوای متنی، با یک فایل PDF مواجه میشیم که یا باید دانلود کنیم و یا داخل صفحه نمایش داده میشه، نه امکان سرچ درست و حسابی بین محتوا رو داریم و نه می‌تونیم مثل آدم متن رو سلکت کنیم</p>
                 </section>
 
                 <section id="content-counter">
@@ -315,6 +327,31 @@
             </a>
 
         </footer>
+
+        <link rel="stylesheet" href="css/weather.min.css">
+
+        <div class="weather snow" id="weather"></div>
+
+        <script defer>
+            let HasDoneShittyThing = false;
+            let audio = new Audio('assets/audio/BaharanKhojasteBaad.mp3');
+
+            function DoSomeShittyThing() {
+                audio.play();
+                document.getElementById('weather').style.display = 'block';
+            }
+
+            document.addEventListener('scroll', function() {
+
+                if ((window.scrollY >= document.getElementById('content-autoplay').offsetTop) && !(HasDoneShittyThing))  {
+
+                    HasDoneShittyThing = true;
+                    DoSomeShittyThing();
+
+                }
+
+            });
+        </script>
 
         <script data-type="em-star" data-name="HTMHell" data-lang="fa" data-color-accent="#212836" src="https://imerfan.ir/em-star.js" defer></script>                        
         
