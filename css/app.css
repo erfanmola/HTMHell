@@ -28,8 +28,8 @@
 
 @font-face {
   font-family: "icomoon";
-  src: url("../assets/fonts/icomoon/icomoon.eot?dnowcr");
-  src: url("../assets/fonts/icomoon/icomoon.eot?dnowcr#iefix") format("embedded-opentype"), url("../assets/fonts/icomoon/icomoon.ttf?dnowcr") format("truetype"), url("../assets/fonts/icomoon/icomoon.woff?dnowcr") format("woff"), url("../assets/fonts/icomoon/icomoon.svg?dnowcr#icomoon") format("svg");
+  src: url("../assets/fonts/IconFont/icomoon.eot?9qitn1");
+  src: url("../assets/fonts/IconFont/icomoon.eot?9qitn1#iefix") format("embedded-opentype"), url("../assets/fonts/IconFont/icomoon.ttf?9qitn1") format("truetype"), url("../assets/fonts/IconFont/icomoon.woff?9qitn1") format("woff"), url("../assets/fonts/IconFont/icomoon.svg?9qitn1#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -46,16 +46,24 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-rotate-cw:before {
+.icon-figma:before {
+  content: "\e904";
+}
+
+.icon-ErfanMola:before {
   content: "\e900";
 }
 
-.icon-arrow-right:before {
+.icon-rotate-cw:before {
   content: "\e901";
 }
 
-.icon-arrow-left:before {
+.icon-arrow-right:before {
   content: "\e902";
+}
+
+.icon-arrow-left:before {
+  content: "\e903";
 }
 
 * {
@@ -395,16 +403,22 @@ footer #EM-Copyright {
   border: 1px solid #D32F2F;
   text-align: center;
   transition: 0.15s all;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
 }
-
-footer #EM-Copyright svg {
-  margin-top: 9px;
-  height: 24px;
-}
-
-footer #EM-Copyright svg path {
+footer #EM-Copyright i {
   transition: 0.15s all;
-  fill: #D32F2F;
+  color: #D32F2F;
+  font-size: 1.45rem;
+}
+footer #EM-Copyright:hover {
+  background: #D32F2F;
+  color: #fff;
+  border-color: #fff;
+}
+footer #EM-Copyright:hover i {
+  color: #fff;
 }
 
 footer #EM-Copyright:hover {
@@ -487,10 +501,14 @@ footer #EM-Copyright:hover svg path {
 
 .project div:first-of-type {
   color: #353535;
-  padding: 12px 0;
+  padding: 12px;
   display: flex;
   align-items: center;
   gap: 4px;
+}
+.project div:first-of-type i {
+  font-size: 1.5rem;
+  padding-left: 8px;
 }
 .project div:first-of-type h2 {
   font-size: 1.325rem;
