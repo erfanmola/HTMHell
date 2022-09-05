@@ -388,103 +388,6 @@ footer #EM-Copyright:hover svg path {
   margin: 16px 0;
 }
 
-.DPXGithubRatingButton {
-  position: fixed;
-  background: #f6f8fa;;
-  color: #24292f;
-  border: 1px solid #d5d8da;
-  box-shadow: rgba(27,31,36,0.15), 0 1px 0 rgba(27,31,36,0.04), inset 0 1px 0 rgba(255,255,255,0.25);;
-  left: 32px;
-  bottom: 32px;
-  line-height: normal;
-  padding: 0;
-  border-radius: 6px;
-  font-size: 1rem;
-  display: grid;
-  grid-auto-flow: column;
-  transition: opacity .15s;
-  
-  span, i, b {
-      display: flex;
-      align-items: center;
-  }
-
-  b {
-      padding: 2px 6px;
-      border-right: 2px solid #d5d8da;
-  }
-
-  i {
-      padding: 0 6px 0 0;
-  }
-
-  span {
-      padding: 0 6px;
-  }
-
-  &:hover {
-      opacity: 0.75;
-  }
-}
-
-#projects {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 32px;
-  padding: 16px;
-
-  li {
-    display: block;
-    border-radius: 24px;
-    transition: opacity .15s;
-    padding: 0 4px;
-    
-    &:hover {
-      opacity: .75;
-    }
-
-    a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      padding: 64px 0;
-      color: #fff;
-      font-size: 1.25rem;
-      font-variation-settings: "wght" 600;
-      text-align: center;
-      line-height: 1.8;
-    }
-
-  }
-
-}
-
-.project div:first-of-type {
-  color: #353535;
-  padding: 12px 0;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-
-
-  h2 {
-    font-size: 1.325rem;
-  }
-
-}
-
-.caution:last-of-type {
-  margin-bottom: 16px;
-}
-
-.caution ~ hr {
-  border: 1px solid transparent;
-  height: 1px;
-  margin: 16px 0;
-  background-image: linear-gradient(90deg,transparent,rgba(0,0,0,.25),transparent);
-}
-
 @media only screen and (min-width: 1080px) {
 
   .desktop-only, .tablet-and-up {
@@ -518,17 +421,6 @@ footer #EM-Copyright:hover svg path {
 
   .mobile-only, .tablet-and-down {
     display: block !important;
-  }
-
-  #projects {
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 16px;
-    padding: 12px 8px;
-    
-    li a {
-      font-size: 1rem !important;
-    }
-
   }
 
   .desktop-only, .tablet-only, .tablet-and-up {
