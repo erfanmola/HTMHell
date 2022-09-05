@@ -423,88 +423,6 @@ footer #EM-Copyright:hover svg path {
   margin: 16px 0;
 }
 
-@media only screen and (min-width: 1080px) {
-  .desktop-only, .tablet-and-up {
-    display: block !important;
-  }
-  .mobile-only, .tablet-only, .tablet-and-down {
-    display: none !important;
-  }
-}
-@media only screen and (max-width: 1080px) {
-  .tablet-only, .tablet-and-up, .tablet-and-down {
-    display: block !important;
-  }
-  .mobile-only, .desktop-only {
-    display: none !important;
-  }
-  .holder {
-    width: 96% !important;
-    margin: auto 2% !important;
-  }
-}
-@media only screen and (max-width: 700px) {
-  .mobile-only, .tablet-and-down {
-    display: block !important;
-  }
-  .desktop-only, .tablet-only, .tablet-and-up {
-    display: none !important;
-  }
-  header {
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-  }
-  header h1 {
-    font-size: 22px;
-    margin: 24px 0 12px;
-  }
-  header h2 {
-    font-size: 13px;
-    margin: 0 0 12px;
-  }
-  header #browser-bar {
-    width: 96%;
-    margin: 12px 2% 24px;
-  }
-  header #browser-bar i {
-    font-size: 16px;
-    padding-right: 8px;
-  }
-  header #browser-bar span {
-    float: left;
-    width: calc(100% - 144px);
-    text-align: center;
-    font-size: 12px;
-    margin: 4px 0 4px 8px;
-  }
-  header #browser-bar:before {
-    right: 32px;
-  }
-  span.divider {
-    font-size: 32px;
-  }
-  .section-container {
-    margin: 12px 0 0;
-  }
-  .section-container h3 {
-    margin: 0 0 12px;
-    padding: 0 8px;
-    font-size: 15px;
-  }
-  .section-container section {
-    width: 92%;
-    margin: 12px 4%;
-  }
-  .section-container section h4 {
-    font-size: 17px;
-  }
-  .section-container section p {
-    font-size: 14px;
-  }
-  footer p {
-    font-size: 14px;
-  }
-}
 .DPXGithubRatingButton {
   position: fixed;
   background: #f6f8fa;
@@ -576,4 +494,106 @@ footer #EM-Copyright:hover svg path {
 }
 .project div:first-of-type h2 {
   font-size: 1.325rem;
+}
+
+.caution:last-of-type {
+  margin-bottom: 16px;
+}
+
+.caution ~ hr {
+  border: 1px solid transparent;
+  height: 1px;
+  margin: 16px 0;
+  background-image: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.25), transparent);
+}
+
+@media only screen and (min-width: 1080px) {
+  .desktop-only, .tablet-and-up {
+    display: block !important;
+  }
+  .mobile-only, .tablet-only, .tablet-and-down {
+    display: none !important;
+  }
+}
+@media only screen and (max-width: 1080px) {
+  .tablet-only, .tablet-and-up, .tablet-and-down {
+    display: block !important;
+  }
+  .mobile-only, .desktop-only {
+    display: none !important;
+  }
+  .holder {
+    width: 96% !important;
+    margin: auto 2% !important;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .mobile-only, .tablet-and-down {
+    display: block !important;
+  }
+  #projects {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 16px;
+    padding: 12px 8px;
+  }
+  #projects li a {
+    font-size: 1rem !important;
+  }
+  .desktop-only, .tablet-only, .tablet-and-up {
+    display: none !important;
+  }
+  header {
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+  }
+  header h1 {
+    font-size: 22px;
+    margin: 24px 0 12px;
+  }
+  header h2 {
+    font-size: 13px;
+    margin: 0 0 12px;
+  }
+  header #browser-bar {
+    width: 96%;
+    margin: 12px 2% 24px;
+  }
+  header #browser-bar i {
+    font-size: 16px;
+    padding-right: 8px;
+  }
+  header #browser-bar span {
+    float: left;
+    width: calc(100% - 144px);
+    text-align: center;
+    font-size: 12px;
+    margin: 4px 0 4px 8px;
+  }
+  header #browser-bar:before {
+    right: 32px;
+  }
+  span.divider {
+    font-size: 32px;
+  }
+  .section-container {
+    margin: 12px 0 0;
+  }
+  .section-container h3 {
+    margin: 0 0 12px;
+    padding: 0 8px;
+    font-size: 15px;
+  }
+  .section-container section {
+    width: 92%;
+    margin: 12px 4%;
+  }
+  .section-container section h4 {
+    font-size: 17px;
+  }
+  .section-container section p {
+    font-size: 14px;
+  }
+  footer p {
+    font-size: 14px;
+  }
 }
