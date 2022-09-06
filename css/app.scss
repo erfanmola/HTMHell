@@ -6,6 +6,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 body {
@@ -537,6 +538,36 @@ footer #EM-Copyright:hover svg path {
   .mobile-only, .tablet-and-down {
     display: block !important;
   }
+
+  .DPXGithubRatingButton {
+    font-size: 0.9rem;
+    left: 16px;
+    grid-template-areas: "count count"
+    "star text";
+    border-radius: 8px;
+
+    b {
+      grid-area: count;
+      border-right: none !important;
+      text-align: center;
+      justify-content: center;
+      padding: 4px 0 0;
+      border-bottom: 2px solid #d5d8da;
+    }
+
+    span {
+      grid-area: text;
+      padding: 0 0 4px 4px;
+    }
+
+    i {
+      grid-area: star;
+      padding: 0 4px 4px;
+    }
+      
+  }
+  
+  
 
   #projects {
     grid-template-columns: 1fr 1fr;
