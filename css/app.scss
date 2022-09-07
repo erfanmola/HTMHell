@@ -6,6 +6,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 body {
@@ -364,15 +365,29 @@ footer #EM-Copyright {
   border: 1px solid #D32F2F;
   text-align: center;
   transition: 0.15s all;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+
+  i {
+    transition: 0.15s all;
+    color: #D32F2F;
+    font-size: 1.45rem;
+  }
+
+  &:hover {
+    background: #D32F2F;
+    color: #fff;
+    border-color: #fff;
+
+    i {
+      color: #fff;
+    }
+
+  }
+
 }
-footer #EM-Copyright svg {
-  margin-top: 9px;
-  height: 24px;
-}
-footer #EM-Copyright svg path {
-  transition: 0.15s all;
-  fill: #D32F2F;
-}
+
 footer #EM-Copyright:hover {
   background: #D32F2F;
   color: #ffffff;
@@ -462,11 +477,15 @@ footer #EM-Copyright:hover svg path {
 
 .project div:first-of-type {
   color: #353535;
-  padding: 12px 0;
+  padding: 12px;
   display: flex;
   align-items: center;
   gap: 4px;
 
+  i {
+    font-size: 1.5rem;
+    padding-left: 8px;
+  }
 
   h2 {
     font-size: 1.325rem;
@@ -519,6 +538,36 @@ footer #EM-Copyright:hover svg path {
   .mobile-only, .tablet-and-down {
     display: block !important;
   }
+
+  .DPXGithubRatingButton {
+    font-size: 0.9rem;
+    left: 16px;
+    grid-template-areas: "count count"
+    "star text";
+    border-radius: 8px;
+
+    b {
+      grid-area: count;
+      border-right: none !important;
+      text-align: center;
+      justify-content: center;
+      padding: 4px 0 0;
+      border-bottom: 2px solid #d5d8da;
+    }
+
+    span {
+      grid-area: text;
+      padding: 0 0 4px 4px;
+    }
+
+    i {
+      grid-area: star;
+      padding: 0 4px 4px;
+    }
+      
+  }
+  
+  
 
   #projects {
     grid-template-columns: 1fr 1fr;
